@@ -2,8 +2,6 @@ import numpy as np
 import sys
 from pathlib import Path
 
-args = sys.argv
-
 def make_filePath(file_name: str) -> str:
     """Make file path.
 
@@ -24,6 +22,10 @@ def make_filePath(file_name: str) -> str:
 
 def main() -> int:
     args = sys.argv
+    
+    if len(args) != 2:
+        sys.stderr.write("Usage: Input_with_pathlib.py <filename>")
+        return 1
 
     file_name = args[1]
     file_path = make_filePath(file_name)
