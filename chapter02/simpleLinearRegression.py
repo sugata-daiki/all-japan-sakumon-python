@@ -10,6 +10,9 @@ if __name__ == "__main__":
     # y = 2.5x + 5 + (noise term)
     y_true = 2.5*x + 5.0 + np.random.normal(0, 2.5, size=len(x))
 
+    # coef = np.polyfit(x, y_true, 1)
+    # slope = coef[0]
+    # intercept = coef[1]
     slope, intercept, r_value, p_value, std_err = linregress(x, y_true)
     y_pred = slope * x + intercept
 
