@@ -49,8 +49,6 @@ ax.set_title("1D Heat Diffusion Equation")
 def update(frame):
     global U
     U = A @ U
-    U[0] = 280
-    U[-1] = 300
     line.set_ydata(U)
     return line,
 
